@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>Spark Controll panel</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/core.js"></script>
+</head>
+<body>
+    <br><br>
+    <button id="led1onbutton"  onclick="fullCheck(1,1)">Full Check</button>
+    <br><br>
+
+    <P>Set Servo Position:<br><br>
+    <input type="range" name="degBox" id="degBoxId" min="0" max="180" step="1" value="90" list="myData" onchange="setValue(this)">
+    <!-- This adds the tick marks to the range but does not in Safari -->
+    <datalist id="myData">
+       <option value="0">
+       <option value="30">
+       <option value="60">
+       <option value="90">
+       <option value="120">
+       <option value="150">
+       <option value="180">
+    </datalist>
+    <br><br>
+    <button id="minusbutton" onclick="fineAdjust(-10)">&lArr; -5 &deg;</button>
+    <button id="plusbutton"  onclick="fineAdjust(+10)">+5 &deg; &rArr;</button>
+    <br><br>
+    <P>Current Position: <span id="curPos"></span><br>
+
+
+
+
+</body>
+</html>
